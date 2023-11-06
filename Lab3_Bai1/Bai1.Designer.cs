@@ -38,8 +38,8 @@
             txt_Key = new TextBox();
             txt_SHA1 = new TextBox();
             chb_SHA1 = new CheckBox();
-            chb_SHA3 = new CheckBox();
-            txt_SHA3 = new TextBox();
+            chb_SHA384 = new CheckBox();
+            txt_SHA384 = new TextBox();
             button1 = new Button();
             button2 = new Button();
             txt_MD5 = new TextBox();
@@ -136,23 +136,23 @@
             chb_SHA1.Text = "SHA1";
             chb_SHA1.UseVisualStyleBackColor = true;
             // 
-            // chb_SHA3
+            // chb_SHA384
             // 
-            chb_SHA3.AutoSize = true;
-            chb_SHA3.Location = new Point(12, 222);
-            chb_SHA3.Name = "chb_SHA3";
-            chb_SHA3.Size = new Size(68, 24);
-            chb_SHA3.TabIndex = 10;
-            chb_SHA3.Text = "SHA3";
-            chb_SHA3.UseVisualStyleBackColor = true;
+            chb_SHA384.AutoSize = true;
+            chb_SHA384.Location = new Point(12, 222);
+            chb_SHA384.Name = "chb_SHA384";
+            chb_SHA384.Size = new Size(84, 24);
+            chb_SHA384.TabIndex = 10;
+            chb_SHA384.Text = "SHA384";
+            chb_SHA384.UseVisualStyleBackColor = true;
             // 
-            // txt_SHA3
+            // txt_SHA384
             // 
-            txt_SHA3.Location = new Point(180, 222);
-            txt_SHA3.Name = "txt_SHA3";
-            txt_SHA3.Size = new Size(774, 27);
-            txt_SHA3.TabIndex = 11;
-            txt_SHA3.TextChanged += txt_SHA3_TextChanged;
+            txt_SHA384.Location = new Point(180, 222);
+            txt_SHA384.Name = "txt_SHA384";
+            txt_SHA384.Size = new Size(774, 27);
+            txt_SHA384.TabIndex = 11;
+            txt_SHA384.TextChanged += txt_SHA3_TextChanged;
             // 
             // button1
             // 
@@ -162,6 +162,7 @@
             button1.TabIndex = 12;
             button1.Text = "Calculate";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -199,8 +200,8 @@
             Controls.Add(txt_MD5);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(txt_SHA3);
-            Controls.Add(chb_SHA3);
+            Controls.Add(txt_SHA384);
+            Controls.Add(chb_SHA384);
             Controls.Add(chb_SHA1);
             Controls.Add(txt_SHA1);
             Controls.Add(txt_Key);
@@ -230,8 +231,8 @@
         private TextBox txt_Key;
         private TextBox txt_SHA1;
         private CheckBox chb_SHA1;
-        private CheckBox chb_SHA3;
-        private TextBox txt_SHA3;
+        private CheckBox chb_SHA384;
+        private TextBox txt_SHA384;
         private Button button1;
         private Button button2;
         private TextBox txt_MD5;

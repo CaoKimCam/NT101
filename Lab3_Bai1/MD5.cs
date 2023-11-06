@@ -11,7 +11,17 @@ namespace Lab3_Bai1
 {
     internal class MD5
     {
-        Bai1 bai1 = new Bai1();
+        public string HextoString(string hexString)
+        {
+            hexString = hexString.Trim();
+            var bytes = new byte[hexString.Length / 2];
+            for (var i = 0; i < bytes.Length; i++)
+            {
+                bytes[i] = Convert.ToByte(hexString.Substring(i * 2, 2), 16);
+            }
+
+            return Encoding.Unicode.GetString(bytes); // returns: "Hello world" for "48656C6C6F20776F726C64"
+        }
         public string TextMD5(string text)
         {
             //Hàm băm cho Text
@@ -29,7 +39,7 @@ namespace Lab3_Bai1
         public string HexMD5 (string text)
         {
             //Hàm băm cho hex
-            string a=bai1.HextoString(text);
+            string a = HextoString(text);
             return TextMD5(a);
         }
         public void FileMD5(string filename)
