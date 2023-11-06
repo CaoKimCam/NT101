@@ -97,9 +97,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(180, 60);
             label2.Name = "label2";
-            label2.Size = new Size(95, 20);
+            label2.Size = new Size(85, 20);
             label2.TabIndex = 5;
-            label2.Text = "Data Format:";
+            label2.Text = "Key format:";
             // 
             // label3
             // 
@@ -122,6 +122,7 @@
             // 
             txt_SHA1.Location = new Point(180, 175);
             txt_SHA1.Name = "txt_SHA1";
+            txt_SHA1.ReadOnly = true;
             txt_SHA1.Size = new Size(774, 27);
             txt_SHA1.TabIndex = 8;
             txt_SHA1.TextChanged += txt_SHA1_TextChanged;
@@ -150,33 +151,38 @@
             // 
             txt_SHA384.Location = new Point(180, 222);
             txt_SHA384.Name = "txt_SHA384";
+            txt_SHA384.ReadOnly = true;
             txt_SHA384.Size = new Size(774, 27);
             txt_SHA384.TabIndex = 11;
             txt_SHA384.TextChanged += txt_SHA3_TextChanged;
             // 
             // button1
             // 
+            button1.BackColor = Color.Transparent;
             button1.Location = new Point(395, 455);
             button1.Name = "button1";
             button1.Size = new Size(119, 47);
             button1.TabIndex = 12;
             button1.Text = "Calculate";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.Transparent;
             button2.Location = new Point(523, 455);
             button2.Name = "button2";
             button2.Size = new Size(119, 47);
             button2.TabIndex = 13;
             button2.Text = "Close";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // txt_MD5
             // 
             txt_MD5.Location = new Point(180, 132);
             txt_MD5.Name = "txt_MD5";
+            txt_MD5.ReadOnly = true;
             txt_MD5.Size = new Size(774, 27);
             txt_MD5.TabIndex = 14;
             txt_MD5.TextChanged += txt_MD5_TextChanged;
@@ -195,6 +201,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1025, 514);
             Controls.Add(checkBox1);
             Controls.Add(txt_MD5);
@@ -213,7 +220,7 @@
             Controls.Add(cb_DataFormat);
             Controls.Add(txt_Data);
             Name = "Bai1";
-            Text = "Form1";
+            Text = "Bai 1: MD5, SHA1, SHA384";
             Load += Main_Load;
             ResumeLayout(false);
             PerformLayout();

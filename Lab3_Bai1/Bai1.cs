@@ -70,9 +70,9 @@ namespace Lab3_Bai1
                     a = txt_Data.Text.Trim();
                     txt_MD5.Text = md5.TextMD5(a);
                 }
-                if(cb_DataFormat.SelectedItem.ToString()=="Hex String")
+                if (cb_DataFormat.SelectedItem.ToString() == "Hex String")
                 {
-                    a= txt_Data.Text.Trim();
+                    a = txt_Data.Text.Trim();
                     txt_MD5.Text = md5.HexMD5(a);
                 }
             }
@@ -102,6 +102,11 @@ namespace Lab3_Bai1
                     txt_SHA1.Text = sha1.HexSHA1(a);
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
